@@ -151,11 +151,12 @@
   background: oklch(0.18 0.04 160 / 0.85);
   color: var(--gold);
   transition: all 0.3s ease;
-}
-@utility social-float-btn:hover {
-  background: var(--gold);
-  color: var(--primary-foreground);
-  transform: scale(1.1);
+
+  &:hover {
+    background: var(--gold);
+    color: var(--primary-foreground);
+    transform: scale(1.1);
+  }
 }
 @utility menu-card {
   background: linear-gradient(140deg, oklch(0.26 0.04 160 / 0.55), oklch(0.22 0.04 160 / 0.4));
@@ -164,11 +165,12 @@
   overflow: hidden;
   box-shadow: var(--shadow-deep);
   transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-}
-@utility menu-card:hover {
-  transform: translateY(-6px);
-  border-color: oklch(0.78 0.12 82 / 0.5);
-  box-shadow: var(--shadow-gold);
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: oklch(0.78 0.12 82 / 0.5);
+    box-shadow: var(--shadow-gold);
+  }
 }
 @utility stat-card {
   background: linear-gradient(140deg, oklch(0.26 0.04 160 / 0.45), oklch(0.22 0.04 160 / 0.3));
