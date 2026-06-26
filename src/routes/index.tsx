@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import {
+  Leaf, Sofa, Sparkles, Users, Music, Phone, Instagram, MapPin, MessageCircle,
+  Coffee, CupSoda, Facebook, Plus, ArrowUp
+} from "lucide-react";
 import logoAsset from "@/assets/tea-square-logo.jpg.asset.json";
 import heroCafe from "@/assets/hero-cafe.jpg";
 import heroCup from "@/assets/hero-cup.jpg";
@@ -44,11 +48,11 @@ const NAV = [
 ];
 
 const FEATURES = [
-  { icon: "🍃", title: "Premium Tea", subtitle: "Collection" },
-  { icon: "🛋️", title: "Cozy", subtitle: "Ambience" },
-  { icon: "✨", title: "Fresh &", subtitle: "Hygienic" },
-  { icon: "👥", title: "Friendly", subtitle: "Staff" },
-  { icon: "🎵", title: "Free Wi-Fi", subtitle: "& Music" },
+  { icon: Leaf, title: "Premium Tea", subtitle: "Collection" },
+  { icon: Sofa, title: "Cozy", subtitle: "Ambience" },
+  { icon: Sparkles, title: "Fresh &", subtitle: "Hygienic" },
+  { icon: Users, title: "Friendly", subtitle: "Staff" },
+  { icon: Music, title: "Free Wi-Fi", subtitle: "& Music" },
 ];
 
 const MENU_ITEMS = [
@@ -59,10 +63,10 @@ const MENU_ITEMS = [
 ];
 
 const STATS = [
-  { icon: "☕", value: "15+", label: "Signature Items" },
-  { icon: "👥", value: "10K+", label: "Happy Customers" },
-  { icon: "🍵", value: "35K+", label: "Cups Served" },
-  { icon: "📍", value: "1", label: "Outlet Branch" },
+  { icon: Coffee, value: "15+", label: "Signature Items" },
+  { icon: Users, value: "10K+", label: "Happy Customers" },
+  { icon: CupSoda, value: "35K+", label: "Cups Served" },
+  { icon: MapPin, value: "1", label: "Outlet Branch" },
 ];
 
 const WHY_CHOOSE = [
@@ -102,9 +106,9 @@ function Index() {
 
       {/* Floating Social Buttons */}
       <div className="social-float">
-        <a href="https://wa.me/916307559329" target="_blank" rel="noreferrer" className="social-float-btn" aria-label="WhatsApp">📱</a>
-        <a href="tel:6307559329" className="social-float-btn" aria-label="Phone">📞</a>
-        <a href="https://www.instagram.com/tea_square_cafe?utm_source=qr" target="_blank" rel="noreferrer" className="social-float-btn" aria-label="Instagram">📷</a>
+        <a href="https://wa.me/916307559329" target="_blank" rel="noreferrer" className="social-float-btn" aria-label="WhatsApp"><MessageCircle size={18} /></a>
+        <a href="tel:6307559329" className="social-float-btn" aria-label="Phone"><Phone size={18} /></a>
+        <a href="https://www.instagram.com/tea_square_cafe?utm_source=qr" target="_blank" rel="noreferrer" className="social-float-btn" aria-label="Instagram"><Instagram size={18} /></a>
       </div>
 
       {/* Hero */}
@@ -143,7 +147,7 @@ function Index() {
         <div className="mx-auto max-w-6xl glass-card grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-5">
           {FEATURES.map((f) => (
             <div key={f.title} className="flex flex-col items-center gap-3 text-center">
-              <div className="feature-icon">{f.icon}</div>
+              <div className="feature-icon"><f.icon size={24} strokeWidth={1.5} /></div>
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-foreground">{f.title}</p>
                 <p className="text-xs uppercase tracking-wide text-gold">{f.subtitle}</p>
@@ -210,7 +214,7 @@ function Index() {
                   </div>
                   <div className="mt-4 flex items-center justify-between">
                     <span className="text-xs uppercase tracking-wider text-foreground/50">Add to order</span>
-                    <button className="flex h-8 w-8 items-center justify-center rounded-full border border-gold/50 text-gold transition hover:bg-gold hover:text-[var(--primary-foreground)]" aria-label={`Add ${item.name}`}>+</button>
+                    <button className="flex h-8 w-8 items-center justify-center rounded-full border border-gold/50 text-gold transition hover:bg-gold hover:text-[var(--primary-foreground)]" aria-label={`Add ${item.name}`}><Plus size={16} /></button>
                   </div>
                 </div>
               </div>
@@ -223,7 +227,7 @@ function Index() {
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {STATS.map((s) => (
               <div key={s.label} className="stat-card flex items-center gap-4 p-6">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold/30 text-2xl text-gold">{s.icon}</div>
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-gold/30 text-gold"><s.icon size={26} strokeWidth={1.5} /></div>
                 <div>
                   <div className="font-serif text-3xl text-gold">{s.value}</div>
                   <div className="text-sm text-foreground/70">{s.label}</div>
@@ -325,11 +329,11 @@ function Index() {
             <p className="mt-2 text-sm text-foreground/70">
               Tea Square Cafe is your cozy retreat, where every sip brings comfort and every moment becomes a memory.
             </p>
-            <div className="mt-4 flex gap-3 text-lg">
-              <a href="https://www.facebook.com/teasquarecafe" target="_blank" rel="noreferrer" className="text-gold transition hover:opacity-80" aria-label="Facebook">f</a>
-              <a href="https://www.instagram.com/tea_square_cafe?utm_source=qr" target="_blank" rel="noreferrer" className="text-gold transition hover:opacity-80" aria-label="Instagram">📷</a>
-              <a href="https://wa.me/916307559329" target="_blank" rel="noreferrer" className="text-gold transition hover:opacity-80" aria-label="WhatsApp">💬</a>
-              <a href="https://maps.app.goo.gl/MpuEtytRoV7x1Ady5?g_st=iw" target="_blank" rel="noreferrer" className="text-gold transition hover:opacity-80" aria-label="Google Maps">📍</a>
+            <div className="mt-4 flex gap-3">
+              <a href="https://www.facebook.com/teasquarecafe" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 text-gold transition hover:bg-gold hover:text-[var(--primary-foreground)]" aria-label="Facebook"><Facebook size={16} /></a>
+              <a href="https://www.instagram.com/tea_square_cafe?utm_source=qr" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 text-gold transition hover:bg-gold hover:text-[var(--primary-foreground)]" aria-label="Instagram"><Instagram size={16} /></a>
+              <a href="https://wa.me/916307559329" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 text-gold transition hover:bg-gold hover:text-[var(--primary-foreground)]" aria-label="WhatsApp"><MessageCircle size={16} /></a>
+              <a href="https://maps.app.goo.gl/MpuEtytRoV7x1Ady5?g_st=iw" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/40 text-gold transition hover:bg-gold hover:text-[var(--primary-foreground)]" aria-label="Google Maps"><MapPin size={16} /></a>
             </div>
           </div>
           <div>
@@ -369,6 +373,15 @@ function Index() {
           © {new Date().getFullYear()} Tea Square Cafe — All Rights Reserved. Designed with ♥ for Tea Lovers
         </div>
       </footer>
+
+      {/* Back to Top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 z-40 flex h-10 w-10 items-center justify-center rounded-full border border-gold/50 bg-gold text-[var(--primary-foreground)] shadow-[var(--shadow-gold)] transition hover:scale-110"
+        aria-label="Back to top"
+      >
+        <ArrowUp size={18} />
+      </button>
     </div>
   );
 }
