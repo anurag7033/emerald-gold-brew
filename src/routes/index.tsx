@@ -264,6 +264,9 @@ function Index() {
         </div>
       </section>
 
+      </div>
+      {/* /tea-leaf bg wrapper */}
+
       {/* Footer */}
       <footer className="border-t border-[oklch(0.78_0.12_82/0.2)] bg-[oklch(0.14_0.03_160)] py-12">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 md:grid-cols-4">
