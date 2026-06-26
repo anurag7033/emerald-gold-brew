@@ -4,6 +4,7 @@ import logoAsset from "@/assets/tea-square-logo.jpg.asset.json";
 import heroCafe from "@/assets/hero-cafe.jpg";
 import heroCup from "@/assets/hero-cup.jpg";
 import aboutCafe from "@/assets/about-cafe.jpg";
+import leafBg from "@/assets/leaf-bg.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -121,6 +122,17 @@ function Index() {
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs uppercase tracking-[0.4em] text-gold/70">scroll</div>
       </section>
+
+      {/* Decorative tea-leaf background wrapping post-hero content */}
+      <div
+        className="relative"
+        style={{
+          backgroundImage: `linear-gradient(oklch(0.18 0.04 160 / 0.92), oklch(0.18 0.04 160 / 0.96)), url(${leafBg})`,
+          backgroundSize: "cover, 800px auto",
+          backgroundRepeat: "no-repeat, repeat",
+          backgroundAttachment: "scroll, fixed",
+        }}
+      >
 
       {/* About */}
       <section id="about" className="mx-auto max-w-7xl px-6 py-24">
