@@ -7,7 +7,7 @@ import {
 import logoAsset from "@/assets/tea-square-logo.jpg.asset.json";
 import heroCafe from "@/assets/hero-cafe.jpg";
 import heroCup from "@/assets/hero-cup.jpg";
-import aboutCafe from "@/assets/about-cafe.jpg";
+import aboutCafeUrl from "@/assets/about-cafe.jpg.url";
 import leafBg from "@/assets/leaf-bg.jpg";
 import menuMasalaTea from "@/assets/menu-masala-tea.jpg";
 import menuHazelnutLatte from "@/assets/menu-hazelnut-latte.jpg";
