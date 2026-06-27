@@ -7,12 +7,21 @@ import {
 import logoAsset from "@/assets/tea-square-logo.jpg.asset.json";
 import heroCafe from "@/assets/hero-cafe.jpg";
 import heroCup from "@/assets/hero-cup.jpg";
-import aboutCafe from "@/assets/about-cafe.jpg";
+
 import leafBg from "@/assets/leaf-bg.jpg";
 import menuMasalaTea from "@/assets/menu-masala-tea.jpg";
 import menuHazelnutLatte from "@/assets/menu-hazelnut-latte.jpg";
 import menuCheeseSandwich from "@/assets/menu-cheese-sandwich.jpg";
 import menuChocolavaCake from "@/assets/menu-chocolava-cake.jpg";
+
+const ABOUT_IMAGE_URL = "https://res.cloudinary.com/daiev9gkn/image/upload/v1782532778/3_2_gswkti.png";
+const GALLERY_IMAGES = [
+  "https://res.cloudinary.com/daiev9gkn/image/upload/v1782532847/WhatsApp_Image_2026-06-26_at_11.18.43_PM_c3mtnf.jpg",
+  "https://res.cloudinary.com/daiev9gkn/image/upload/v1782532778/3_2_gswkti.png",
+  "https://res.cloudinary.com/daiev9gkn/image/upload/v1782532778/2_oylovr.png",
+  "https://res.cloudinary.com/daiev9gkn/image/upload/v1782532778/1_vdt0ji.png",
+];
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -171,7 +180,7 @@ function Index() {
         <section id="about" className="mx-auto max-w-7xl px-6 pt-32 pb-24">
           <div className="grid gap-12 md:grid-cols-2 md:items-center">
             <div className="overflow-hidden rounded-2xl ring-1 ring-[oklch(0.78_0.12_82/0.25)]">
-              <img src={aboutCafe} alt="Tea Square Cafe interior" loading="lazy" width={800} height={600} className="h-[500px] w-full object-cover transition duration-700 hover:scale-105" />
+              <img src={ABOUT_IMAGE_URL} alt="Tea Square Cafe interior" loading="lazy" width={800} height={600} className="h-[500px] w-full object-cover transition duration-700 hover:scale-105" />
             </div>
             <div>
               <p className="mb-3 text-xs uppercase tracking-[0.3em] text-gold">Our Story</p>
@@ -264,8 +273,8 @@ function Index() {
             <div className="gold-divider my-6" />
           </div>
           <div className="mt-12 grid auto-rows-[200px] grid-cols-2 gap-4 md:grid-cols-4">
-            {[heroCafe, heroCup, aboutCafe, heroCafe, aboutCafe, heroCup].map((src, i) => (
-              <div key={i} className={`group relative overflow-hidden rounded-xl ring-1 ring-[oklch(0.78_0.12_82/0.2)] ${i === 0 ? "row-span-2" : ""} ${i === 3 ? "col-span-2" : ""}`}>
+            {GALLERY_IMAGES.map((src, i) => (
+              <div key={i} className={`group relative overflow-hidden rounded-xl ring-1 ring-[oklch(0.78_0.12_82/0.2)] ${i <= 1 ? "md:row-span-2 md:col-span-2" : "md:col-span-2"}`}>
                 <img src={src} alt={`Gallery ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.16_0.04_160/0.7)] to-transparent opacity-60 transition group-hover:opacity-40" />
               </div>
