@@ -11,6 +11,6 @@ export default defineConfig({
   base,
   plugins: [react(), tailwindcss(), tsconfigPaths()],
   build: {
-    outDir: ".output/public",
+    outDir: "dist",
   },
 });

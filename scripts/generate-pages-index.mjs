@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const rootDir = resolve(__dirname, '..');
-const outputDir = join(rootDir, '.output', 'public');
+const outputDir = join(rootDir, 'dist');
 
 async function getAssetName(pattern) {
   const assetsDir = join(outputDir, 'assets');
