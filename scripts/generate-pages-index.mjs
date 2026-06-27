@@ -19,7 +19,7 @@ async function getAssetName(pattern) {
 async function main() {
   const [entryJs, stylesCss] = await Promise.all([
     getAssetName(/^index-[^/]+\.js$/),
-    getAssetName(/^styles-[^/]+\.css$/),
+    getAssetName(/^index-[^/]+\.css$/),
   ]);
 
   const html = `<!doctype html>
