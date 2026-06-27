@@ -274,7 +274,7 @@ function Index() {
           </div>
           <div className="mt-12 grid auto-rows-[200px] grid-cols-2 gap-4 md:grid-cols-4">
             {GALLERY_IMAGES.map((src, i) => (
-              <div key={i} className={`group relative overflow-hidden rounded-xl ring-1 ring-[oklch(0.78_0.12_82/0.2)] ${i === 0 ? "row-span-2" : ""} ${i === 3 ? "col-span-2" : ""}`}>
+              <div key={i} className={`group relative overflow-hidden rounded-xl ring-1 ring-[oklch(0.78_0.12_82/0.2)] ${i <= 1 ? "md:row-span-2 md:col-span-2" : "md:col-span-2"}`}>
                 <img src={src} alt={`Gallery ${i + 1}`} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.16_0.04_160/0.7)] to-transparent opacity-60 transition group-hover:opacity-40" />
               </div>
