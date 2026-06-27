@@ -85,7 +85,7 @@ const WHY_CHOOSE = [
 
 const PARTNERS = ["Himanshu Verma", "Utkarsh Sharma", "Raghvendra Pratap Singh", "Saurabh Panday"];
 
-function Index() {
+export function Index() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);

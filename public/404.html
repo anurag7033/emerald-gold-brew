@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tea Square Cafe</title>
+    <script>
+      const path = window.location.pathname.replace(/\/$/, "");
+      const repo = "/emerald-gold-brew";
+      const redirect = `${repo}/?redirect=${encodeURIComponent(path)}`;
+      window.location.replace(redirect);
+    </script>
+  </head>
+  <body></body>
+</html>
